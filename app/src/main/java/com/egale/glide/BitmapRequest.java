@@ -55,7 +55,7 @@ public class BitmapRequest {
     public void into(ImageView imageView) {
         imageView.setTag(urlMd5);
         this.imageView = new SoftReference<>(imageView);
-        RequestManager.getInstance().addBitmapRequest(this);
+        RequestManager.getInstance(context).addBitmapRequest(this);
     }
 
     public String getUrl() {
